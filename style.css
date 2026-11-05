@@ -629,6 +629,17 @@ section {
     margin-top: 0.5rem;
 }
 
+/* Show validation errors when the script adds .error to a field group */
+.form-group.error .error-msg {
+    display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    outline: 2px solid #ef4444;
+    outline-offset: 2px;
+}
+
 .form-status {
     margin-top: 1rem;
     font-weight: 500;
