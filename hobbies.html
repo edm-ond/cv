@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Hobbies</title>
-<!-- CSS -->
+    <meta name="description" content="Edmond Otieno's hobbies and interests.">
+    <title>Hobbies | Edmond Otieno</title>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<header>
+</head>
+<body class="hobbies-page">
+    <header>
         <nav>
-            <!-- LOGO -->
-            <div class="logo">
-                <a href="index.html">EO.</a>
-            </div>
-
-            <!-- DESKTOP NAVIGATION -->
+            <div class="logo"><a href="index.html">EO.</a></div>
             <button class="menu-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-               
                 <li><a href="experience.html">Experience</a></li>
-                
                 <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li> 
+                <li><a href="hobbies.html" class="active" aria-current="page">Hobbies</a></li>
             </ul>
-
         </nav>
     </header>
-
-
-
-
-
-
-
-
-
-  <script src="script.js"></script>
-    </body>
+    <div class="site-name-banner" aria-label="Edmond Otieno">
+        <p>Edmond Otieno</p>
+    </div>
+    <main>
+        <section class="hobbies" aria-labelledby="hobbies-title">
+            <div class="section-header">
+                <h1 id="hobbies-title">My Hobbies</h1>
+                <p>Activities I enjoy outside of my studies and development work.</p>
+            </div>
+            <div class="hobbies-content">
+                <h2>Favourite hobbies</h2>
+                <ol class="hobby-list hobby-list-ordered">
+                    <li><strong>Coding</strong> — exploring ideas and building practical projects.</li>
+                    <li><strong>Playing football</strong> — staying active and enjoying team play.</li>
+                    <li><strong>Gaming</strong> — enjoying interactive challenges and strategy.</li>
+                </ol>
+                <h2>Additional hobby ideas <span class="suggestion-label">(suggestions)</span></h2>
+                <p class="hobby-note">These are suggestions to consider adding; they are not presented as established personal hobbies.</p>
+                <ul class="hobby-list hobby-list-unordered">
+                    <li>Reading technology articles</li>
+                    <li>Learning new digital tools</li>
+                    <li>Listening to podcasts</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Edmond Otieno. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
-    
-
-
