@@ -13,7 +13,7 @@
     --primary-dark: #3730A3; /* Indigo 800 */
     --primary-light: #818CF8; /* Indigo 400 */
     --cyan: #F43F5E; /* Rose accent */
-    
+
     /* Light Theme (Default) */
     --background: #FAFAF9; /* Warm off-white */
     --background-grad: linear-gradient(135deg, #F3F4F6 0%, #FAFAF9 50%, #EEF2FF 100%);
@@ -256,6 +256,75 @@ nav {
     cursor: pointer;
 }
 
+
+/* =========================================
+   SITE NAME BANNER
+========================================= */
+.site-name-banner {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.75rem 0;
+    background-color: var(--surface);
+    border-top: 1px solid rgba(79, 70, 229, 0.12);
+    border-bottom: 1px solid rgba(79, 70, 229, 0.12);
+}
+
+.site-name-banner p {
+    display: inline-block;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--primary);
+    animation: name-slide 10s ease-in-out infinite alternate;
+}
+
+@keyframes name-slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(100vw - 100%)); }
+}
+
+/* =========================================
+   HOBBIES PAGE
+========================================= */
+.hobbies-page {
+    background-color: #eaf6ff;
+    background-image: none;
+}
+
+.hobbies-content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.hobbies-content h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.hobbies-content h2:first-child { margin-top: 0; }
+
+.hobby-list {
+    margin: 1rem 0 0;
+    padding-left: 1.5rem;
+}
+
+.hobby-list li { margin-bottom: 0.85rem; }
+.hobby-list-ordered { list-style: decimal; }
+.hobby-list-unordered { list-style: disc; }
+.suggestion-label, .hobby-note { color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 0.95rem; }
+.hobby-note { margin-top: 0.75rem; }
+.email-me { margin-top: 1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+    .site-name-banner p { animation: none; }
+}
+
 /* =========================================
    LAYOUT SECTIONS
 ========================================= */
@@ -270,6 +339,7 @@ section {
 ========================================= */
 .hero {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
@@ -679,7 +749,7 @@ footer {
     .menu-button {
         display: block;
     }
-    
+
     .nav-links {
         position: fixed;
         top: 73px;
@@ -701,6 +771,7 @@ footer {
 
     .hero {
         flex-direction: column-reverse;
+
         text-align: center;
         padding-top: 2rem;
     }
@@ -712,11 +783,11 @@ footer {
     .hero-buttons {
         justify-content: center;
     }
-    
+
     .contact-info {
         text-align: center;
     }
-    
+
     .social-links {
         justify-content: center;
     }
@@ -726,20 +797,25 @@ footer {
     section {
         padding: 4rem 1.5rem;
     }
-    
+
     .hero-image img {
         max-width: 260px;
     }
-    
+
     .timeline-item, .project-info, .contact-form, .skill-card, .cert-item {
         padding: 1.5rem;
     }
 
     /* Force all grids to a single column on very small phones to prevent horizontal scrolling */
-    .projects-container, 
-    .skills-container, 
-    .cert-container, 
+    .projects-container,
+    .skills-container,
+    .cert-container,
     .contact-container {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 768px) {
+    .site-name-banner p { font-size: 2rem; }
+    .hobbies-content { padding: 1.75rem; }
 }
