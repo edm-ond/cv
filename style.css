@@ -398,6 +398,46 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
+.profile-divider {
+    width: min(100%, 420px);
+    margin: 1.25rem auto 0;
+    border: 0;
+    border-top: 2px solid var(--primary);
+}
+
+/* =========================================
+   PERSONAL EXPERIENCE CV TABLE
+========================================= */
+.cv-table-wrapper {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+}
+
+.cv-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+.cv-table th,
+.cv-table td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border: 2px solid #2e8b57;
+}
+
+.cv-table th {
+    background: #d9f1ff;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.cv-table td {
+    color: var(--text-muted);
+}
+
 /* =========================================
    ABOUT SECTION
 ========================================= */
