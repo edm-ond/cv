@@ -720,7 +720,7 @@ section {
    FOOTER
 ========================================= */
 footer {
-    background-color: transparent;
+    background-color: #166534;
     padding: 4rem 2rem;
 }
 
@@ -728,8 +728,12 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    color: var(--text-muted);
+    color: #ffffff;
     font-size: 0.95rem;
+}
+
+.footer-bottom a {
+    color: #ffffff;
 }
 
 /* =========================================
