@@ -261,28 +261,22 @@ nav {
    SITE NAME BANNER
 ========================================= */
 .site-name-banner {
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 0.75rem 0;
+    padding: 0.75rem 2rem;
     background-color: var(--surface);
     border-top: 1px solid rgba(79, 70, 229, 0.12);
     border-bottom: 1px solid rgba(79, 70, 229, 0.12);
 }
 
 .site-name-banner p {
-    display: inline-block;
     margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    font-size: clamp(1.75rem, 7vw, 48px);
     font-weight: 700;
     line-height: 1.15;
     color: var(--primary);
-    animation: name-slide 10s ease-in-out infinite alternate;
-}
-
-@keyframes name-slide {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(100vw - 100%)); }
+    white-space: normal;
+    overflow-wrap: normal;
+    animation: none;
 }
 
 /* =========================================
@@ -720,7 +714,7 @@ section {
    FOOTER
 ========================================= */
 footer {
-    background-color: #166534;
+    background-color: transparent;
     padding: 4rem 2rem;
 }
 
@@ -728,12 +722,8 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    color: #ffffff;
+    color: var(--text-muted);
     font-size: 0.95rem;
-}
-
-.footer-bottom a {
-    color: #ffffff;
 }
 
 /* =========================================
@@ -820,6 +810,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .site-name-banner p { font-size: 2rem; }
+    .site-name-banner p { font-size: clamp(1.5rem, 7vw, 2rem); }
     .hobbies-content { padding: 1.75rem; }
 }
